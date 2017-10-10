@@ -1,0 +1,40 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <include file="struts-default.xml"/>
+    <!-- 在tutorial包下定义多个action，命名空间为"/" -->
+    <package name="tutorial" extends="struts-default"  namespace="/">
+    <!-- 定义各action的名称，所在的类，调用的方法及最终页面，action名称与起始页面的action名称一致 -->
+        <action name="QueryBook" class="tutorial.BookAction" method ="QueryBook">
+            <result>Query_mysql.jsp</result>
+           
+        </action>
+        
+        <action name="ShowDatas" class="tutorial.BookAction" method ="ShowDatas">
+            <result>Query_mysql.jsp</result>
+         
+        </action>
+        
+        <action name="ShowBookDatas" class="tutorial.BookAction" method ="ShowBookDatas">
+            <result>Query_mysql.jsp</result>
+           
+        </action>
+        
+        <action name="DeleteBook" class="tutorial.BookAction" method ="DeleteBook">
+            <result>Query_mysql.jsp</result>
+           
+        </action>
+        
+         <action name="InsertBook" class="tutorial.BookAction" method="InsertBook"> 
+            <result>Query_mysql.jsp</result>
+           
+        </action>  
+        
+         <action name="UpdateBook" class="tutorial.BookAction" method="UpdateBook"> 
+            <result>Query_mysql.jsp</result>
+           
+        </action>  
+        
+    </package>
+</struts>
